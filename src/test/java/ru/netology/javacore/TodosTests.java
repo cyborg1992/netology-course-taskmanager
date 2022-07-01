@@ -11,7 +11,6 @@ public class TodosTests {
     @BeforeEach
     void setUp() {
         todos = new Todos();
-        todos.addTask("test");
     }
 
     @AfterEach
@@ -21,20 +20,29 @@ public class TodosTests {
 
     @Test
     void testAddTask() {
-        Assertions.assertTrue(todos.addTask("test2"));
+        Assertions.assertTrue(todos.addTask("test"));
         Assertions.assertFalse(todos.addTask("test"));
     }
 
     @Test
     void testRemoveTask() {
+        todos.addTask("test");
+
         Assertions.assertTrue(todos.removeTask("test"));
         Assertions.assertFalse(todos.removeTask("test"));
     }
 
     @Test
     void testGetAllTasks() {
-        String expected = "test";
+        String expected = "Акробатика Пробежка Учёба";
+
+        todos.addTask("Учёба");
+        todos.addTask("Акробатика");
+        todos.addTask("Пробежка");
+
+
         String actual = todos.getAllTasks();
+
         Assertions.assertEquals(expected, actual);
     }
 }

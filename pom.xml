@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.netology</groupId>
-    <artifactId>javacore</artifactId>
+    <artifactId>netology-courses-javacore</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
